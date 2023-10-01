@@ -550,6 +550,7 @@ open class RTMPStream: NetStream {
         case RTMPStream.Code.playReset.rawValue:
             readyState = .play
         case RTMPStream.Code.playStart.rawValue:
+            print("PLAYING TEST")
             readyState = .playing
         case RTMPStream.Code.publishStart.rawValue:
             readyState = .publishing

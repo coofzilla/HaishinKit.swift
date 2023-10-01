@@ -547,10 +547,10 @@ open class RTMPStream: NetStream {
         case RTMPConnection.Code.connectSuccess.rawValue:
             readyState = .initialized
             rtmpConnection.createStream(self)
+            print("CONNECTION SUCCESS FROM FORK")
         case RTMPStream.Code.playReset.rawValue:
             readyState = .play
         case RTMPStream.Code.playStart.rawValue:
-            print("PLAYING TEST")
             readyState = .playing
         case RTMPStream.Code.publishStart.rawValue:
             readyState = .publishing

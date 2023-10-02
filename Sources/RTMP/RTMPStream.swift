@@ -271,6 +271,7 @@ open class RTMPStream: NetStream {
 
     /// Creates a new stream.
     public init(connection: RTMPConnection) {
+        print("CREATING STREAM")
         self.rtmpConnection = connection
         super.init()
         dispatcher = EventDispatcher(target: self)
